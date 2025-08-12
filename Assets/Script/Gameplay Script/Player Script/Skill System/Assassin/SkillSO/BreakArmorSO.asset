@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: efeb6bfb58a67fd4c9514a543b010341, type: 3}
+  m_Name: BreakArmorSO
+  m_EditorClassIdentifier: 
+  id: 20
+  tooltipContent: '- <b>Name</b> : Break Armor
+
+    - <b>Effect</b> : Applies Armor
+    Break for a short duration, reducing the target''s armor to 0
+
+    - <b>Duration</b>
+    : 5s'
+  sprite: {fileID: 21300000, guid: 8e22f15d177aeb2439286e93cbd0fe4b, type: 3}
+  skillName: BreakArmor
+  cooldown: 25
+  duration: 5
+  soundEffect: {fileID: 8300000, guid: 718e9ecdb5cfc9f4ca8e864b581a50c2, type: 3}
+  skillEffectPrefab: {fileID: 6436973008673645349, guid: 080071aa72a1c5541908045089ad5e4a, type: 3}

@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81666e16d2895804da71aa5555936f39, type: 3}
+  m_Name: Lvl 4 Witch Weapon
+  m_EditorClassIdentifier: 
+  ID: 34
+  itemLevel: 4
+  primaryType: 1
+  secondaryType: 1
+  itemType: 0
+  sprite: {fileID: 1963826185, guid: 3033cec63baa9ff488f7d2042f07088b, type: 3}
+  hp: 0
+  damage: 40
+  armor: 0
+  attackSpeed: 25

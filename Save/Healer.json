@@ -1,0 +1,22 @@
+{
+    "isRange": true,
+    "type": 2,
+    "attackType": 1,
+    "currentLevel": 2,
+    "currentXP": 3,
+    "upgradePoint": 0,
+    "xpToNextLevel": 139,
+    "hp": 500,
+    "armor": 5,
+    "damage": 48,
+    "attackSpeed": 100,
+    "moveSpeed": 1.2999999523162842,
+    "HPPerPoint": 25,
+    "damagePerPoint": 4,
+    "armorPerPoint": 1,
+    "speedPerPoint": 4,
+    "weaponID": 10,
+    "armorID": 60,
+    "skill1": 10,
+    "skill2": 11
+}

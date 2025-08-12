@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b127b88be30a83409fd4d989b930a70, type: 3}
+  m_Name: CriticalHitSO
+  m_EditorClassIdentifier: 
+  id: 21
+  tooltipContent: '- <b>Name</b> : Critical Hit
+
+    - <b>Effect</b> : The next attack
+    deals 300% damage'
+  sprite: {fileID: 21300000, guid: c9b111244721cc64d8b82c1163b981cd, type: 3}
+  skillName: CriticalHit
+  cooldown: 10
+  duration: 0
+  soundEffect: {fileID: 8300000, guid: 28dcc6dcd2a7e5042bea5105c6584110, type: 3}
+  skillEffectPrefab: {fileID: 7497087604242742009, guid: 114acd5ef5a21f8438bd5cd184412c27, type: 3}
+  multiDamage: 3

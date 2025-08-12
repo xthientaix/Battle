@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83ab4f532c67c3b4189f69c2b32abc18, type: 3}
+  m_Name: TimeSealSO
+  m_EditorClassIdentifier: 
+  id: 31
+  tooltipContent: '- <b>Name</b> : Time Seal
+
+    - <b>Effect</b> : Applies a time-freeze
+    effect, stunning the target briefly
+
+    - <b>Duration</b> : 5s'
+  sprite: {fileID: 21300000, guid: eaf46c5155710294eb3d3dc30edbbe92, type: 3}
+  skillName: TimeSeal
+  cooldown: 15
+  duration: 5
+  soundEffect: {fileID: 8300000, guid: 38ba83a3b656945419a63096b0ba7f15, type: 3}
+  skillEffectPrefab: {fileID: 2798412497461140477, guid: e8b891d230b004d46b6d1541c5ef411a, type: 3}

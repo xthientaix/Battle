@@ -1,0 +1,83 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - EnemyGroup
+  - GameManager
+  - XPSystem
+  - Tooltip
+  - SwapSystem
+  - HeroStatsHolder
+  - ItemHolder
+  - HeroInfo
+  - Store
+  - PlayerGroup
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: BackGround
+    uniqueID: 4060171013
+    locked: 0
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: Character
+    uniqueID: 3830364135
+    locked: 0
+  - name: Skeleton
+    uniqueID: 3052268981
+    locked: 0
+  - name: Slime
+    uniqueID: 2012400365
+    locked: 0
+  - name: Goblin
+    uniqueID: 513660919
+    locked: 0
+  - name: Assassin
+    uniqueID: 3969249357
+    locked: 0
+  - name: Healer
+    uniqueID: 858686177
+    locked: 0
+  - name: Knight
+    uniqueID: 2087204315
+    locked: 0
+  - name: Witch
+    uniqueID: 2250378007
+    locked: 0
+  - name: HP Bar
+    uniqueID: 4206459239
+    locked: 0

@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81666e16d2895804da71aa5555936f39, type: 3}
+  m_Name: Lvl 3 Healer Armor
+  m_EditorClassIdentifier: 
+  ID: 63
+  itemLevel: 3
+  primaryType: 2
+  secondaryType: 1
+  itemType: 1
+  sprite: {fileID: 2124871705, guid: 03a868001c78e7b40afc76ffce763558, type: 3}
+  hp: 280
+  damage: 5
+  armor: 5
+  attackSpeed: 10

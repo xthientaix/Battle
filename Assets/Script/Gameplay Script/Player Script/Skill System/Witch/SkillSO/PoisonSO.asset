@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27e238fc03e642844ad5983777b1c4f4, type: 3}
+  m_Name: PoisonSO
+  m_EditorClassIdentifier: 
+  id: 30
+  tooltipContent: '- <b>Name</b> : Poison
+
+    - <b>Effect</b> : Inflicts damage
+    over time to the target
+
+    - <b>Duration</b> : 5s'
+  sprite: {fileID: 21300000, guid: 94fa7d79642ca2f4cb5291e8df621a75, type: 3}
+  skillName: Poison
+  cooldown: 25
+  duration: 5
+  soundEffect: {fileID: 8300000, guid: 550e8432e0f9e2042963e8c669bfca7f, type: 3}
+  skillEffectPrefab: {fileID: 1335980069360693430, guid: 9c5aec7e53a42bc498216a844d96d73e, type: 3}
+  damagePerTick: 15
+  tickAmount: 10

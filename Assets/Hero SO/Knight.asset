@@ -1,0 +1,43 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 12d27e6223bdb624a84a277acdcc25c0, type: 3}
+  m_Name: Knight
+  m_EditorClassIdentifier: 
+  content: '- <b>Class</b> : Knight
+
+    - <b>Range</b> : Melee hero
+
+    - <b>Playstyle</b>
+    : Defensive frontline fighter who absorbs damage and punishes attackers with
+    counter effects'
+  smallImage: {fileID: -1994559735, guid: cd43dda0aeef3084fbef3300b31b1fe6, type: 3}
+  bigImage: {fileID: -1753812162, guid: c25b2f2bffd9b3742926977e0765b3c1, type: 3}
+  isRange: 0
+  type: 0
+  attackType: 0
+  currentLevel: 1
+  currentXP: 0
+  upgradePoint: 0
+  xpToNextLevel: 0
+  hp: 650
+  armor: 8
+  damage: 50
+  attackSpeed: 100
+  moveSpeed: 1.3
+  HPPerPoint: 35
+  damagePerPoint: 4
+  armorPerPoint: 3
+  speedPerPoint: 4
+  weaponID: 0
+  armorID: 50
+  skill1: 0
+  skill2: 1
