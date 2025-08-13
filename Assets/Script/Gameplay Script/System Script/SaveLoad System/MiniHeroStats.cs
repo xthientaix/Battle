@@ -48,6 +48,7 @@ public class MiniHeroStats : MonoBehaviour, IPointerClickHandler
     [Header("Skill - ID")]
     public int skill1;
     public int skill2;
+    public int skill3;
 
     private void Awake()
     {

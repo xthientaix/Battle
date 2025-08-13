@@ -15,6 +15,8 @@ public class EnemyGroup : MonoBehaviour
 
     private readonly int numberOfEnemies = 4;
 
+    private readonly float bonusPer2Level = 0.18f;
+
     /*--------------------------------------------------*/
 
     private void Awake()
@@ -73,8 +75,20 @@ public class EnemyGroup : MonoBehaviour
 
     private void GoToFirstLocation(EnemyStateManager stateManager, Vector3 firstLocations)
     {
+        int per2Level = playerGroup.highestLevel / 2;
+        float bonus = per2Level * bonusPer2Level;
+        int index = Random.Range(0, 2);
 
-        //EnemyStateManager stateManager = enemyPool.GetChild(i).GetComponent<EnemyStateManager>();
+        switch (index)
+        {
+            case 0:
+                stateManager.enemyStats.damage = (int)(stateManager.enemyStats.damage * (1 + bonus));
+                break;
+            case 1:
+                stateManager.enemyStats.SetHP((int)(stateManager.enemyStats.hp * (1 + bonus)));
+                break;
+        }
+
         stateManager.target = null;
         stateManager.locationToMove = firstLocations;
         stateManager.movingState.isFirstLocation = true;
@@ -88,19 +102,6 @@ public class EnemyGroup : MonoBehaviour
 
     public void AfterFirstLocation(EnemyStats enemyStats)
     {
-        float bonus = (int)(playerGroup.highestLevel / 2) * 1.5f / 10;
-        int index = Random.Range(0, 2);
-
-        switch (index)
-        {
-            case 0:
-                enemyStats.damage = (int)(enemyStats.damage * (1 + bonus));
-                break;
-            case 1:
-                enemyStats.SetHP((int)(enemyStats.hp * (1 + bonus)));
-                break;
-        }
-
         enemyStats.transform.parent = aliveEnemies;
     }
 }

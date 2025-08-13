@@ -33,6 +33,7 @@ public class SkillHolder : MonoBehaviour
 
         skills.Add(AllSkill.Instance.GetSkill(heroStats.skill1));
         skills.Add(AllSkill.Instance.GetSkill(heroStats.skill2));
+        skills.Add(AllSkill.Instance.GetSkill(heroStats.skill3));
 
         for (int i = 0; i < skills.Count; i++)
         {
@@ -60,11 +61,16 @@ public class SkillHolder : MonoBehaviour
                 skillEffectPrefabs.Add(null);
             }
         }
+
+        if (playerStateManager.heroStats.currentLevel < 5)
+        {
+            skillImage[2].transform.parent.gameObject.SetActive(false);
+        }
     }
 
     private void Update()
     {
-        for (int i = 0; i < cooldownsRemains.Count; i++)
+        for (int i = 0; i < 2; i++)
         {
             if (cooldownsRemains[i] > 0)
             {

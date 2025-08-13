@@ -8,14 +8,13 @@ public class SaveLoad : MonoBehaviour
 #if UNITY_ANDROID || UNITY_IOS
         return Application.persistentDataPath;
 #else
-    return Path.GetFullPath(Path.Combine(Application.dataPath, ".."));
+        return Path.GetFullPath(Path.Combine(Application.dataPath, ".."));
 #endif
     }
 
     public static string GetSavePath(string typeString)
     {
         string gameFolder = GetPath();
-        //gameFolder = Path.GetFullPath(Path.Combine(Application.dataPath, ".."));
         string saveFolder = Path.Combine(gameFolder, "Save");
 
         Directory.CreateDirectory(saveFolder);
@@ -49,14 +48,16 @@ public class SaveLoad : MonoBehaviour
         string typeString = hero.type.ToString();
         string pathString = GetSavePath(typeString);    //đường dẫn file save
 
+        //  có save
         if (File.Exists(pathString))
         {
-            //đọc và lấy thông tin save từ đường dẫn
+            //  đọc và lấy thông tin save từ đường dẫn
             string jsonString = File.ReadAllText(pathString);
             JsonUtility.FromJsonOverwrite(jsonString, hero);
         }
         else
         {
+            //  chưa có save , tạo save mới với thông số default
             string jsonString = JsonUtility.ToJson(HeroStatsHolder.instance.GetDefaultStats(hero.type));
             JsonUtility.FromJsonOverwrite(jsonString, hero);
             hero.CalculateLevel();

@@ -48,4 +48,5 @@ public class HeroStatsSO : ScriptableObject
     [Header("Skill - ID")]
     public int skill1;
     public int skill2;
+    public int skill3;
 }

@@ -41,6 +41,7 @@ public class HeroStats : MonoBehaviour, IHitable
     [Header("Skill - ID")]
     public int skill1;
     public int skill2;
+    public int skill3;
 
     [Space(10)]
     [Header("Item")]

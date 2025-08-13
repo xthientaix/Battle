@@ -137,6 +137,7 @@ public class ShowHeroInfo : MonoBehaviour
         string typeString = "Lineup";
         string pathString = SaveLoad.GetSavePath(typeString);
 
+        //  có save lineup
         if (File.Exists(pathString))
         {
             string jsonString = File.ReadAllText(pathString);
@@ -144,7 +145,7 @@ public class ShowHeroInfo : MonoBehaviour
         }
         else
         {
-            //tạo default lineup , lấy theo thứ tự default stats list
+            //  chưa có save lineup , tạo default lineup , lấy theo thứ tự default stats list
             for (int i = 0; i < squad.childCount; i++)
             {
                 heroGroup.SquadGroup.Add(HeroStatsHolder.instance.GetDefaultStatsList()[i].type);
