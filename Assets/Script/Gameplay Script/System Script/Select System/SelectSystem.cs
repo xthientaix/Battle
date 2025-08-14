@@ -13,6 +13,7 @@ public class SelectSystem : MonoBehaviour
     [Space(10)]
     [SerializeField] Transform selecterHighlight;
     [SerializeField] Transform targetHighlight;
+    [SerializeField] LineRenderer lineRenderer;
 
     [SerializeField] Transform limitSpace;  // Gắn trong inspector
     private float[] limitX = { 0, 0 };
@@ -69,6 +70,9 @@ public class SelectSystem : MonoBehaviour
         {
             targetHighlight.position = target.transform.position;
         }
+
+        lineRenderer.SetPosition(0, selecterHighlight.position);
+        lineRenderer.SetPosition(1, targetHighlight.position);
     }
 
     public void OnMouseDownSelect(Selecter selecter)
@@ -128,6 +132,7 @@ public class SelectSystem : MonoBehaviour
         {
             selecting = true;
             targetHighlight.gameObject.SetActive(true);
+            lineRenderer.gameObject.SetActive(true);
         }
         target = null;
     }
@@ -136,6 +141,7 @@ public class SelectSystem : MonoBehaviour
     {
         selecterHighlight.gameObject.SetActive(isOn);
         targetHighlight.gameObject.SetActive(isOn);
+        lineRenderer.gameObject.SetActive(isOn);
     }
 
     private Vector2 CheckLimitSpace()

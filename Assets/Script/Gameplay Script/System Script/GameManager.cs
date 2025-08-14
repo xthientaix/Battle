@@ -36,11 +36,15 @@ public class GameManager : MonoBehaviour
         completePanel.GetComponent<RectTransform>().localScale = new Vector3(0.1f, 0.1f, 1);
         pausePanel.GetComponent<RectTransform>().localScale = new Vector3(0.1f, 0.1f, 1);
 
+        backgroundAudio.loop = true;
+
         _ = Fade(false);
     }
 
     public void EndGame(bool isWin)
     {
+        backgroundAudio.loop = false;
+
         if (isWin)
         {
             endText.text = victoryText;
