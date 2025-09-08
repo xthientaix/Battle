@@ -7,7 +7,7 @@ public class MultipleArmorEffect : MonoBehaviour
     private HeroStats heroStats;
     private PlayerStateManager stateManager;
 
-    private int multiTime;
+    private float multiTime;
 
     private SkillData skillData;
     private GameObject effectPrefab;
@@ -16,7 +16,7 @@ public class MultipleArmorEffect : MonoBehaviour
 
     private Color32 effectColor = new(150, 220, 255, 255);
 
-    public void Init(float duration, int multiTime, SkillData skillData, GameObject effectPrefab, GameObject caster, Transform target)
+    public void Init(float duration, float multiTime, SkillData skillData, GameObject effectPrefab, GameObject caster, Transform target)
     {
         endTime = Time.time + duration;
         this.multiTime = multiTime;
@@ -35,7 +35,7 @@ public class MultipleArmorEffect : MonoBehaviour
     private void Start()
     {
         previousArmor = heroStats.CurrentArmor;
-        heroStats.CurrentArmor *= multiTime;
+        heroStats.CurrentArmor = (int)(heroStats.CurrentArmor * multiTime);
 
         stateManager.stateColor.Add(effectColor);
         stateManager.ChangeVisualColor(stateManager.stateColor[^1]);

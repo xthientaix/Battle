@@ -7,7 +7,6 @@ public class CriticalHit : SkillData
     // Skill dùng lên bản thân
 
     [SerializeField] private int multiDamage;
-    //[SerializeField] AudioClip soundEffect;
 
     /*---------------------------------------------------------------------*/
 

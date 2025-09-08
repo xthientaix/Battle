@@ -58,7 +58,7 @@ public class PoisonEffect : MonoBehaviour
         { return; }
 
         enemyStateManager.stateColor.Remove(effectColor);
-        enemyStateManager.ChangeVisualColor(enemyStateManager.stateColor[^1]);
+        enemyStateManager.OffColorEffet();
         Destroy(this);
     }
 }

@@ -7,7 +7,7 @@ public class Poison : SkillData
     // Skill chỉ dùng lên enemy
 
     [SerializeField] int damagePerTick;     // Damage
-    [SerializeField] int tickAmount;        // Só lần heal/duration
+    [SerializeField] int tickAmount;        // Só lần dmg/duration
 
     //[SerializeField] AudioClip soundEffect;
 

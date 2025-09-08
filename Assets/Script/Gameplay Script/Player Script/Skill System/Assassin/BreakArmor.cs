@@ -6,9 +6,6 @@ public class BreakArmor : SkillData
 {
     // Skill chỉ dùng lên enemy
 
-    //[SerializeField] AudioClip soundEffect;
-    //[SerializeField] GameObject skillEffectPrefab;
-
     /*---------------------------------------------------------------------*/
 
     public override void Activate(GameObject effectPrefab, GameObject caster, Transform target)

@@ -198,7 +198,7 @@ public class EnemyStateManager : MonoBehaviour, ITarget
         Invoke(nameof(OffColorEffet), 0.5f);
     }
 
-    private void OffColorEffet()
+    public void OffColorEffet()
     {
         ChangeVisualColor(stateColor[^1]);
     }

@@ -15,9 +15,29 @@ public class EnemyMovingState : BaseState<EnemyStateManager>
     public override void EnterState(EnemyStateManager stateManager)
     {
         Facing(stateManager);
-        stateManager.anim.Play("Moving");
-        stateManager.PlaySoundEffect("move");
 
+        if (stateManager.target != null)
+        {
+            // Mục tiêu đã chết
+            if (!stateManager.target.GetComponent<IHitable>().IsAlive())
+            {
+                stateManager.target = null;
+                stateManager.SwitchState(stateManager.searchingState);
+                return;
+            }
+            else
+            {
+                UpdateLocation(stateManager);
+
+                if (stateManager.enemyStats.isRange || (Vector3.Distance(stateManager.transform.position, stateManager.locationToMove) <= 0.03f))
+                {
+                    stateManager.SwitchState(stateManager.attackingState);
+                    return;
+                }
+            }
+        }
+        stateManager.anim.Play("Moving");
+        //stateManager.PlaySoundEffect("move");
         moveSpeed = stateManager.enemyStats.moveSpeed;
     }
 

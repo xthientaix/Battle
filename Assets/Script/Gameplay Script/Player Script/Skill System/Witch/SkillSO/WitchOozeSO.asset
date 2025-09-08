@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 19fb88ac031c810498d5240ac83bfdd2, type: 3}
+  m_Name: WitchOozeSO
+  m_EditorClassIdentifier: 
+  id: 32
+  tooltipContent: '- <b>Name</b> : Witch''s Ooze
+
+    - <b>Effect</b> : The next
+    attack creates a toxic zone at the target''s location, dealing damage over time
+    to all enemies within its area
+
+    - <b>Duration</b> : 10s'
+  sprite: {fileID: 21300000, guid: 8162e12131423404c896326b2ad00db2, type: 3}
+  skillName: WitchOoze
+  cooldown: 30
+  duration: 10
+  soundEffect: {fileID: 8300000, guid: 679a55fc7e79f7f4281751c013d5e44c, type: 3}
+  skillEffectPrefab: {fileID: 9027980764565917059, guid: a5e3b1e9b7237da4a938a491962e627d, type: 3}
+  damagePerTick: 50
+  tickAmount: 5

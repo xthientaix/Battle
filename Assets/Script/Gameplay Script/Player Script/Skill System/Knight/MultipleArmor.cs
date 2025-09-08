@@ -6,7 +6,7 @@ public class MultipleArmor : SkillData
 {
     // Skill dùng lên bản thân
 
-    [SerializeField] private int multiTime;
+    [SerializeField] private float multiTime;
     //[SerializeField] AudioClip soundEffect;
 
     /*---------------------------------------------------------------------*/

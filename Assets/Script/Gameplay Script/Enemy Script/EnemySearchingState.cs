@@ -3,7 +3,7 @@ using UnityEngine;
 public class EnemySearchingState : BaseState<EnemyStateManager>
 {
     float time = 0;
-    readonly float searchTime = 1f;
+    readonly float searchTime = 0.5f;
 
     /*-------------------------------------------------------*/
 

@@ -16,7 +16,7 @@ MonoBehaviour:
   tooltipContent: '- <b>Name</b> : Multiple Armor
 
     - <b>Effect</b> : Temporarily
-    increases armor by 100%
+    increases armor by 50%
 
     - <b>Duration</b> : 8s'
   sprite: {fileID: 21300000, guid: ce80f1832d1712243826356e1ab09a55, type: 3}
@@ -25,4 +25,4 @@ MonoBehaviour:
   duration: 8
   soundEffect: {fileID: 8300000, guid: 82de4a1096cb11c488d387cb699cfa99, type: 3}
   skillEffectPrefab: {fileID: 1864869335846101541, guid: d53275ce5272d4c46aff010f3263cfd9, type: 3}
-  multiTime: 2
+  multiTime: 1.5

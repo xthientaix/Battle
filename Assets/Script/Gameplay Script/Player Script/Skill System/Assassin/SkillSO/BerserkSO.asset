@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f2acf1c8d8f8ca48bc12bb2eabd8b24, type: 3}
+  m_Name: BerserkSO
+  m_EditorClassIdentifier: 
+  id: 22
+  tooltipContent: '- <b>Name</b> : Berserk
+
+    - <b>Effect</b> : Goes berserk for
+    a short duration, doubling attack speed but halving armor
+
+    - <b>Duration</b>
+    : 8s'
+  sprite: {fileID: 21300000, guid: 74fa5df7e7634fb43adbfcb8dfd25974, type: 3}
+  skillName: Berserk
+  cooldown: 30
+  duration: 8
+  soundEffect: {fileID: 8300000, guid: 4f53af6e067fd884c953eee4d9f87e6d, type: 3}
+  skillEffectPrefab: {fileID: 578355796456109602, guid: 84867a9161012e541879bfd1631f0c15, type: 3}
+  multiAttackSpeed: 2
+  percentArmorLoss: 0.5

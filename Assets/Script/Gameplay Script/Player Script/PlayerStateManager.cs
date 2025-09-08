@@ -232,4 +232,14 @@ public class PlayerStateManager : MonoBehaviour, ITarget
             bodyPart.color = color;
         }
     }
+
+    public void AddOnAttack(Action effect)
+    {
+        attackKind += effect;
+    }
+
+    public void RemoveOnAttack(Action effect)
+    {
+        attackKind -= effect;
+    }
 }

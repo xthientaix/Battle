@@ -90,6 +90,8 @@ public class SkillHolder : MonoBehaviour
         }
     }
 
+
+    //  Button event
     public void Skill(int index)
     {
         if (cooldownsRemains[index] > 0)
@@ -102,6 +104,7 @@ public class SkillHolder : MonoBehaviour
         }
     }
 
+    //  Anim event
     public void ActiveSkill()
     {
         skills[activeSkillIndex].Activate(skillEffectPrefabs[activeSkillIndex], gameObject, playerStateManager.target);

@@ -47,7 +47,7 @@ public class BreakArmorEffect : MonoBehaviour
 
         enemyStats.armor = previousArmor;
         enemyStateManager.stateColor.Remove(effectColor);
-        enemyStateManager.ChangeVisualColor(enemyStateManager.stateColor[^1]);
+        enemyStateManager.OffColorEffet();
         Destroy(this);
     }
 }

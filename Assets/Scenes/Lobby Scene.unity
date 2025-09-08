@@ -3106,12 +3106,16 @@ MonoBehaviour:
   skillList:
   - {fileID: 11400000, guid: 374d487776ecbe847b53a366ad2849e6, type: 2}
   - {fileID: 11400000, guid: 59d55dd3f0865874697f0108f2943753, type: 2}
+  - {fileID: 11400000, guid: 2e02c118194787d4ea846a7179769183, type: 2}
   - {fileID: 11400000, guid: 9ff0d836e59dfd8438b6a5fd3d6ecb87, type: 2}
   - {fileID: 11400000, guid: 01c280357c26d0846a8f5c2ec393d1fb, type: 2}
+  - {fileID: 11400000, guid: d1ebc0d0ee2e4fd48ad388983d9ee522, type: 2}
   - {fileID: 11400000, guid: 4f4c174ebd15c814aaaf1de45e60887c, type: 2}
   - {fileID: 11400000, guid: 0f40befc6cbf4324fb9a3d8df8f99182, type: 2}
+  - {fileID: 11400000, guid: fb85b9672741409439076efc5e2862b5, type: 2}
   - {fileID: 11400000, guid: d112976f1ed328444b2a7850b432275a, type: 2}
   - {fileID: 11400000, guid: 9259e59694dc12b49a07f4333461f220, type: 2}
+  - {fileID: 11400000, guid: 9698770156ff0f646b079f9e7598fabb, type: 2}
 --- !u!4 &390191769
 Transform:
   m_ObjectHideFlags: 0

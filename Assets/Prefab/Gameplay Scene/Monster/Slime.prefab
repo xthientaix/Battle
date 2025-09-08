@@ -385,11 +385,11 @@ GameObject:
   - component: {fileID: 7457203334903435833}
   - component: {fileID: 7457203334903435832}
   - component: {fileID: 8980211982626133722}
-  - component: {fileID: 5529146816473710661}
   - component: {fileID: 2947031946103899210}
+  - component: {fileID: 6736310511406842168}
   m_Layer: 0
   m_Name: Slime
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -583,7 +583,18 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!65 &5529146816473710661
+--- !u!210 &2947031946103899210
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7457203334903435843}
+  m_Enabled: 1
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!65 &6736310511406842168
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -596,17 +607,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.9, y: 0.8, z: 0.1}
   m_Center: {x: -0.05, y: 0.4, z: 0}
---- !u!210 &2947031946103899210
-SortingGroup:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7457203334903435843}
-  m_Enabled: 1
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
 --- !u!1 &8189676148485778703
 GameObject:
   m_ObjectHideFlags: 0

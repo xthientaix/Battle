@@ -16,7 +16,6 @@ public class CriticalHitEffect : MonoBehaviour
         this.skillData = skillData;
         this.effectPrefab = effectPrefab;
         this.caster = caster;
-
     }
 
     private void Awake()

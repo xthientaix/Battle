@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 512349fd7cac8054c9d0de813de8a7c9, type: 3}
+  m_Name: TauntSO
+  m_EditorClassIdentifier: 
+  id: 2
+  tooltipContent: '- <b>Name</b> : Taunt
+
+    - <b>Effect</b> : Taunts all enemies.
+    Gains 25% armor per taunted enemy, but attack speed decreases proportionally
+
+    -
+    <b>Duration</b> : 8s'
+  sprite: {fileID: 21300000, guid: 8f3b9578eb5883045997cdf0623ab843, type: 3}
+  skillName: Taunt
+  cooldown: 25
+  duration: 8
+  soundEffect: {fileID: 8300000, guid: 9aca4cd4f760ce748b25df39c851640b, type: 3}
+  skillEffectPrefab: {fileID: 1716573712358029279, guid: c6c4909aa15256c4ca857f8f85e4c0cb, type: 3}
+  shiftPerEnemy: 0.25

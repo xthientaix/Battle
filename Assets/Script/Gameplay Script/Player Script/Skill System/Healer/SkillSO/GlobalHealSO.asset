@@ -23,4 +23,4 @@ MonoBehaviour:
   duration: 0
   soundEffect: {fileID: 8300000, guid: a8a67c979dd417a4f95d7d5262478c15, type: 3}
   skillEffectPrefab: {fileID: 0}
-  multiHealEffect: 3
+  multiHealEffect: 2
