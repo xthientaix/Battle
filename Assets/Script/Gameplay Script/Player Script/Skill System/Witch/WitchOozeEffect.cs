@@ -37,17 +37,17 @@ public class WitchOozeEffect : MonoBehaviour
 
     private void OnTriggerEnter(Collider collision)
     {
-        if (collision.CompareTag("Enemy"))
+        if (collision.CompareTag("EnemyFoot"))
         {
-            enemiesInArea.Add(collision.gameObject.GetComponent<EnemyStateManager>());
+            enemiesInArea.Add(collision.gameObject.GetComponentInParent<EnemyStateManager>());
         }
     }
 
     private void OnTriggerExit(Collider collision)
     {
-        if (collision.CompareTag("Enemy"))
+        if (collision.CompareTag("EnemyFoot"))
         {
-            enemiesInArea.Remove(collision.gameObject.GetComponent<EnemyStateManager>());
+            enemiesInArea.Remove(collision.gameObject.GetComponentInParent<EnemyStateManager>());
         }
     }
 

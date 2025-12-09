@@ -1,4 +1,5 @@
 using DG.Tweening;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 using TMPro;
 using UnityEngine;
@@ -20,6 +21,10 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject pausePanel;
     [SerializeField] private GameObject pauseButton;
 
+    [Header("-----BackGround-----")]
+    [SerializeField] private SpriteRenderer backGround;
+    [SerializeField] private List<Sprite> backGroundSprite;
+
     [Header("-----Sound-----")]
     [SerializeField] private AudioSource backgroundAudio;
     [SerializeField] private AudioClip victorySound;
@@ -36,6 +41,7 @@ public class GameManager : MonoBehaviour
         completePanel.GetComponent<RectTransform>().localScale = new Vector3(0.1f, 0.1f, 1);
         pausePanel.GetComponent<RectTransform>().localScale = new Vector3(0.1f, 0.1f, 1);
 
+        backGround.sprite = backGroundSprite[Random.Range(0, backGroundSprite.Count)];
         backgroundAudio.loop = true;
 
         _ = Fade(false);

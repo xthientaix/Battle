@@ -28,7 +28,7 @@ public class PlayerAttackingState : BaseState<PlayerStateManager>
             return;
         }
 
-        if (Vector3.Distance(stateManager.transform.position, stateManager.target.position) > 1.55f && !stateManager.heroStats.isRange)
+        if (Vector3.Distance(stateManager.transform.position, stateManager.target.position) > 1.8f && !stateManager.heroStats.isRange)
         {
             stateManager.SwitchState(stateManager.movingState);
             return;

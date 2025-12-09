@@ -35,10 +35,10 @@ public class CircleOfCareEffect : MonoBehaviour
 
     private void OnTriggerEnter(Collider collision)
     {
-        if (collision.CompareTag("Player") && collision.gameObject != target)
+        if (collision.CompareTag("PlayerFoot") && collision.transform.parent != target)
         {
             int healAmount = (int)(stateManager.heroStats.CurrentDamage * healPercent);
-            collision.gameObject.GetComponent<HeroStats>().Hited(healAmount, DamageType.Effect, AttackType.Healer, stateManager.gameObject);
+            collision.transform.parent.GetComponent<HeroStats>().Hited(healAmount, DamageType.Effect, AttackType.Healer, stateManager.gameObject);
         }
     }
 

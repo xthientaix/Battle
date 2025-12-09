@@ -15,6 +15,8 @@ TagManager:
   - Store
   - PlayerGroup
   - Enemy
+  - EnemyFoot
+  - PlayerFoot
   - Foot
   layers:
   - Default

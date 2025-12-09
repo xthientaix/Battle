@@ -25,7 +25,7 @@ public class PlayerStateManager : MonoBehaviour, ITarget
 
     public Animator anim;
 
-    private SortingGroup sortingGroup;
+    public SortingGroup sortingGroup;
 
     [Header("---Sound Effect---")]
     public AudioSource audioSource;
@@ -92,10 +92,10 @@ public class PlayerStateManager : MonoBehaviour, ITarget
         _currentState.UpdateState(this);
     }
 
-    private void LateUpdate()
-    {
-        sortingGroup.sortingOrder = -(int)(transform.position.y * 100);
-    }
+    //private void LateUpdate()
+    //{
+    //    sortingGroup.sortingOrder = -(int)(transform.position.y * 100);
+    //}
 
     public void SwitchState(BaseState<PlayerStateManager> nextState)
     {
@@ -170,7 +170,6 @@ public class PlayerStateManager : MonoBehaviour, ITarget
     // Anim event
     public void ChanneledSkill()
     {
-        //skillHolder.ActiveSkill();
         usingSkillState.isChanneling = false;
     }
 

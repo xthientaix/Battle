@@ -2,7 +2,7 @@
 
 public class PlayerMovingState : BaseState<PlayerStateManager>
 {
-    private Vector3 offsetMove = new(1.4f, 0, 0);
+    private Vector3 offsetMove = new(1.7f, 0, 0);
     private Vector3 pos1;
     private Vector3 pos2;
 
@@ -91,6 +91,7 @@ public class PlayerMovingState : BaseState<PlayerStateManager>
         }
 
         stateManager.transform.position = Vector3.MoveTowards(stateManager.transform.position, stateManager.locationToMove, moveSpeed * Time.deltaTime);
+        stateManager.sortingGroup.sortingOrder = -(int)(stateManager.transform.position.y * 100);
     }
 
     public override void ExitState(PlayerStateManager stateManager)

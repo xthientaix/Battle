@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 
 public class EnemyGroup : MonoBehaviour
 {
@@ -8,6 +8,7 @@ public class EnemyGroup : MonoBehaviour
     [SerializeField] Transform firstLocations;
 
     [Space(10)]
+    [SerializeField] private GameObject boss;
     public Transform aliveEnemies;
     public Transform deadEnemies;
     public int aliveCount;
@@ -26,6 +27,7 @@ public class EnemyGroup : MonoBehaviour
 
     private void Start()
     {
+        RandomBoss();
         Init();
     }
 
@@ -103,5 +105,17 @@ public class EnemyGroup : MonoBehaviour
     public void AfterFirstLocation(EnemyStats enemyStats)
     {
         enemyStats.transform.parent = aliveEnemies;
+    }
+
+    private void RandomBoss()
+    {
+        //30% xuất hiện Boss , giữ nguyên. 70% ko xuất hiện Boss , Boss inactive và di chuyển Boss qua phần deadEnemies
+        int random = Random.Range(0, 10);
+        if (random >= 3)
+        {
+            //Ko có Boss , inactive Boss và di chuyển Boss qua phần deadEnemies
+            boss.SetActive(false);
+            boss.transform.parent = deadEnemies;
+        }
     }
 }

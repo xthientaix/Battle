@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9994632164fb98f4f819499af7c9dcb5, type: 3}
+  m_Name: MeteorSO
+  m_EditorClassIdentifier: 
+  id: 100
+  tooltipContent: '- <b>Name</b> : Meteor
+
+    - <b>Effect</b> : Call down a meteor,
+    damaging all enemies in the impact zone'
+  sprite: {fileID: 21300000, guid: 6d8cb79c12d2cfe44a313dd9d4038c87, type: 3}
+  skillName: Meteor
+  cooldown: 30
+  duration: 0
+  soundEffect: {fileID: 0}
+  skillEffectPrefab: {fileID: 3193302199782809791, guid: f6f3ad75853df0e45bc8d5d66d5ed250, type: 3}
+  impactDamage: 250
+  fallDuration: 2.5

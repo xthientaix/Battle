@@ -6,7 +6,7 @@ public class EnemySkillHolder : MonoBehaviour
     private EnemyStateManager enemyStateManager;
 
     [SerializeField] private List<SkillData> skills = new();
-    private List<GameObject> skillEffectPrefabs = new();
+    [SerializeField] private List<GameObject> skillEffectPrefabs = new();
     private List<float> cooldowns = new();
     //private List<float> cooldownsRemains;
 
@@ -39,14 +39,20 @@ public class EnemySkillHolder : MonoBehaviour
             }
         }
 
-        Invoke(nameof(UseSkill), 20f);
+        Invoke(nameof(UseSkill), 25f);
     }
 
     private void UseSkill()
     {
+        enemyStateManager.UseSkillState();
+    }
+
+    //  Anim event
+    public void ActiveSkill()
+    {
         CancelInvoke(nameof(UseSkill));
         activeSkillIndex = Random.Range(0, skills.Count);
         skills[activeSkillIndex].Activate(skillEffectPrefabs[activeSkillIndex], gameObject, enemyStateManager.target);
-        Invoke(nameof(UseSkill), cooldowns[activeSkillIndex] + 10f);
+        Invoke(nameof(UseSkill), cooldowns[activeSkillIndex] + Random.Range(0, 10));
     }
 }

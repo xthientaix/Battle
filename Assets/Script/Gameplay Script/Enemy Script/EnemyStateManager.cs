@@ -16,6 +16,7 @@ public class EnemyStateManager : MonoBehaviour, ITarget
     public EnemySearchingState searchingState = new();
     public EnemyMovingState movingState = new();
     public EnemyAttackingState attackingState = new();
+    public EnemyUsingSkillState usingSkillState = new();
     public EnemyDyingState dyingState = new();
 
     public Vector3 locationToMove;
@@ -25,10 +26,10 @@ public class EnemyStateManager : MonoBehaviour, ITarget
 
     public Animator anim;
 
-    private SortingGroup sortingGroup;
+    public SortingGroup sortingGroup;
 
     [Header("---Sound Effect---")]
-    private AudioSource audioSource;
+    public AudioSource audioSource;
     [SerializeField] private AudioClip attackSound;
     [SerializeField] private AudioClip moveSound;
 
@@ -57,6 +58,7 @@ public class EnemyStateManager : MonoBehaviour, ITarget
         enemyGroup = transform.parent.GetComponentInParent<EnemyGroup>();
         audioSource = GetComponent<AudioSource>();
         sortingGroup = GetComponent<SortingGroup>();
+        anim = GetComponent<Animator>();
     }
 
     private void Start()
@@ -91,10 +93,10 @@ public class EnemyStateManager : MonoBehaviour, ITarget
         _currentState.UpdateState(this);
     }
 
-    private void LateUpdate()
-    {
-        sortingGroup.sortingOrder = -(int)(transform.position.y * 100);
-    }
+    //private void LateUpdate()
+    //{
+    //    sortingGroup.sortingOrder = -(int)(transform.position.y * 100);
+    //}
 
     public void SwitchState(BaseState<EnemyStateManager> nextState)
     {
@@ -160,6 +162,22 @@ public class EnemyStateManager : MonoBehaviour, ITarget
                 return;
             }
         }
+    }
+
+    public void UseSkillState()
+    {
+        if (_currentState != usingSkillState)
+        {
+            usingSkillState.previousState = _currentState;
+        }
+
+        SwitchState(usingSkillState);
+    }
+
+    // Anim event
+    public void ChanneledSkill()
+    {
+        usingSkillState.isChanneling = false;
     }
 
     public void UpdateHealthBar(float percentRemain)

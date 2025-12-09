@@ -134,6 +134,7 @@ Canvas:
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
+  m_VertexColorAlwaysGammaSpace: 0
   m_AdditionalShaderChannelsFlag: 0
   m_SortingLayerID: 2012400365
   m_SortingOrder: 2
@@ -178,6 +179,51 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!1 &2953645838461632452
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1510037173194469121}
+  - component: {fileID: 4248013328609910744}
+  m_Layer: 0
+  m_Name: Foot collider
+  m_TagString: EnemyFoot
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1510037173194469121
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2953645838461632452}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7457203334903435839}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &4248013328609910744
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2953645838461632452}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.5, y: 0.1, z: 0.1}
+  m_Center: {x: -0.05, y: 0.05, z: 0}
 --- !u!1 &4486840912933991923
 GameObject:
   m_ObjectHideFlags: 0
@@ -408,6 +454,7 @@ Transform:
   m_Children:
   - {fileID: 1858229441809444613}
   - {fileID: 2183661156498709886}
+  - {fileID: 1510037173194469121}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -440,6 +487,7 @@ MonoBehaviour:
   target: {fileID: 0}
   enemyGroup: {fileID: 0}
   anim: {fileID: 7457203334903435832}
+  audioSource: {fileID: 0}
   attackSound: {fileID: 8300000, guid: fa5c73672c8e51d47b20fa6ab7bd9971, type: 3}
   moveSound: {fileID: 0}
   projectilePool: {fileID: 0}

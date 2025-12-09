@@ -27,7 +27,7 @@ public class EnemyAttackingState : BaseState<EnemyStateManager>
             return;
         }
 
-        if (Vector3.Distance(stateManager.transform.position, stateManager.target.position) > 1.5f && !stateManager.enemyStats.isRange)
+        if (Vector3.Distance(stateManager.transform.position, stateManager.target.position) > 1.8f && !stateManager.enemyStats.isRange)
         {
             stateManager.SwitchState(stateManager.movingState);
             return;
