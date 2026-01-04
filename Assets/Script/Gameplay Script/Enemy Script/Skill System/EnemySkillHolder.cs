@@ -52,7 +52,11 @@ public class EnemySkillHolder : MonoBehaviour
     {
         CancelInvoke(nameof(UseSkill));
         activeSkillIndex = Random.Range(0, skills.Count);
-        skills[activeSkillIndex].Activate(skillEffectPrefabs[activeSkillIndex], gameObject, enemyStateManager.target);
+
+        Transform aliveHeros = enemyStateManager.enemyGroup.playerGroup.aliveHeros;
+        Transform target = aliveHeros.GetChild(Random.Range(0, aliveHeros.childCount));
+
+        skills[activeSkillIndex].Activate(skillEffectPrefabs[activeSkillIndex], gameObject, target);
         Invoke(nameof(UseSkill), cooldowns[activeSkillIndex] + Random.Range(0, 10));
     }
 }

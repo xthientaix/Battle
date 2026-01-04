@@ -1,7 +1,10 @@
-﻿public class EnemyUsingSkillState : BaseState<EnemyStateManager>
+﻿using UnityEngine;
+
+public class EnemyUsingSkillState : BaseState<EnemyStateManager>
 {
     public bool isChanneling;
     public BaseState<EnemyStateManager> previousState;
+    private readonly int changeTargetPercent = 30;
 
     /*---------------------------------------------------*/
 
@@ -19,6 +22,14 @@
     {
         if (!isChanneling)
         {
+            // Có tỉ lệ thay đổi mục tiêu tấn công sau khi sử dụng kỹ năng (chuyển sang trạng thái searhchingState)
+            if (Random.Range(0, 100) < changeTargetPercent)
+            {
+                stateManager.target = null;
+                stateManager.SwitchState(stateManager.searchingState);
+                return;
+            }
+
             stateManager.SwitchState(previousState);
         }
     }
