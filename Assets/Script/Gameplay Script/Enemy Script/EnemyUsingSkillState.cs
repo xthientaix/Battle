@@ -4,7 +4,7 @@ public class EnemyUsingSkillState : BaseState<EnemyStateManager>
 {
     public bool isChanneling;
     public BaseState<EnemyStateManager> previousState;
-    private readonly int changeTargetPercent = 30;
+    private readonly int changeTargetPercent = 70;
 
     /*---------------------------------------------------*/
 
